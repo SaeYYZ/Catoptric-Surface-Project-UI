@@ -1,0 +1,19 @@
+parameter: row, columns
+
+API endpoint: /api/v1/move
+POST: header: Content-Type: application/json, 
+      body: {
+        "row": typeof number ( 0 or 1),
+        "column": typeof number ( 0 or 1),
+        "direction": typeof number, (0: left, 1: right, 2: up, 3: down)
+        "step": typeof number
+      }
+      return: {
+        "status": typeof number, (200: OK, 400: Bad Request, 500: Internal Server Error)
+      }
+
+API endpoint: /api/v1/reset
+GET: header: Content-Type: application/json, 
+     return: {
+        "status": typeof number, (200: OK, 400: Bad Request, 500: Internal Server Error)
+      }
